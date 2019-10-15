@@ -7,6 +7,7 @@
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/5550/badge.svg)](https://scan.coverity.com/projects/nlohmann-json)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f3732b3327e34358a0e9d1fe9f661f08)](https://www.codacy.com/app/nlohmann/json?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nlohmann/json&amp;utm_campaign=Badge_Grade)
 [![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/nlohmann/json.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nlohmann/json/context:cpp)
+[![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/json.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:json)
 [![Try online](https://img.shields.io/badge/try-online-blue.svg)](https://wandbox.org/permlink/TarF5pPn9NtHQjhf)
 [![Documentation](https://img.shields.io/badge/docs-doxygen-blue.svg)](http://nlohmann.github.io/json)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nlohmann/json/master/LICENSE.MIT)
@@ -156,7 +157,7 @@ If you are using the [Meson Build System](http://mesonbuild.com), then you can g
 
 If you are using [Conan](https://www.conan.io/) to manage your dependencies, merely add `jsonformoderncpp/x.y.z@vthiery/stable` to your `conanfile.py`'s requires, where `x.y.z` is the release version you want to use. Please file issues [here](https://github.com/vthiery/conan-jsonformoderncpp/issues) if you experience problems with the packages.
 
-If you are using [Spack](https://www.spack.io/) to manage your dependencies, you can use the `nlohmann_json` package. Please see the [spack project](https://github.com/spack/spack) for any issues regarding the packaging.
+If you are using [Spack](https://www.spack.io/) to manage your dependencies, you can use the [`nlohmann-json` package](https://spack.readthedocs.io/en/latest/package_list.html#nlohmann-json). Please see the [spack project](https://github.com/spack/spack) for any issues regarding the packaging.
 
 If you are using [hunter](https://github.com/ruslo/hunter/) on your project for external dependencies, then you can use the [nlohmann_json package](https://docs.hunter.sh/en/latest/packages/pkg/nlohmann_json.html). Please see the hunter project for any issues regarding the packaging.
 
@@ -927,7 +928,7 @@ NLOHMANN_JSON_SERIALIZE_ENUM( TaskState, {
 })
 ```
 
-The `NLOHMANN_JSON_SERIALIZE_ENUM()` macro declares a set of `to_json()` / `from_json()` functions for type `TaskState` while avoiding repetition and boilerplate serilization code.
+The `NLOHMANN_JSON_SERIALIZE_ENUM()` macro declares a set of `to_json()` / `from_json()` functions for type `TaskState` while avoiding repetition and boilerplate serialization code.
 
 **Usage:**
 
@@ -1251,7 +1252,7 @@ I deeply appreciate the help of the following people.
 - [Ivor Wanders](https://github.com/iwanders) helped reducing the CMake requirement to version 3.1.
 - [njlr](https://github.com/njlr) updated the Buckaroo instructions.
 - [Lion](https://github.com/lieff) fixed a compilation issue with GCC 7 on CentOS.
-- [Isaac Nickaein](https://github.com/nickaein) improved the integer serilization performance and  implemented the `contains()` function.
+- [Isaac Nickaein](https://github.com/nickaein) improved the integer serialization performance and  implemented the `contains()` function.
 - [past-due](https://github.com/past-due) suppressed an unfixable warning.
 - [Elvis Oric](https://github.com/elvisoric) improved Meson support.
 - [Matěj Plch](https://github.com/Afforix) fixed an example in the README.
